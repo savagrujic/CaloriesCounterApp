@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(27,27,50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+p,h1 {
+    color:white;
+    font-weight: bolder;
+    font-size: 1.3em;
+
+
+}
+h1 {
+    font-size: 3.5em;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+
+    input {
+        margin-left: 20px;
+    }
+}
+
+.main {
+  
+    width: 75vh;
+    
+}
+.breakfest {
+    border: 1px solid white;
+    min-height: 5vh;
+    max-height: auto    ;
+   p {
+    margin-top: -12px;
+    margin-left: 15px;
+    width: 95px;
+    z-index: 3;
+    background-color: rgb(27,27,50);
+   }
+}
+.lunch {
+    border: 1px solid white;
+    min-height: 5vh;
+    max-height: auto    ;
+   p {
+    margin-top: -12px;
+    margin-left: 15px;
+    width: 64px;
+    z-index: 3;
+    background-color: rgb(27,27,50);
+   }
+}
+
+.dinner {
+    border: 1px solid white;
+    min-height: 5vh;
+    max-height: auto    ;
+   p {
+    margin-top: -12px;
+    margin-left: 15px;
+    width: 67px;
+    z-index: 3;
+    background-color: rgb(27,27,50);
+   }
+}
+.snacks {
+    border: 1px solid white;
+    min-height: 5vh;
+    max-height: auto    ;
+   p {
+    margin-top: -12px;
+    margin-left: 15px;
+    width: 73px;
+    z-index: 3;
+    background-color: rgb(27,27,50);
+   }
+}
+.workout {
+    border: 1px solid white;
+    min-height: 5vh;
+    max-height: auto    ;
+   p {
+    margin-top: -12px;
+    margin-left: 15px;
+    width: 85px;
+    z-index: 3;
+    background-color: rgb(27,27,50);
+   }
+}
+.dodajrucak,.dodajworkout,.dodajuzinu,.dodajdorucak,.dodajveceru {
+    h4 {
+        color: white;
+    }
+    margin: 15px;
+}
+
+.addfoodcontainer {
+    display: flex;
+    margin: 20px 0;
+
+    button {
+      
+        background-color: #FECC4D;
+        width: 13vh;
+        height: 3.5vh;
+    }
+    select {
+        margin: 0 10px;
+    }
+}
+.calccalories {
+    button {
+        background-color: #FECC4D;
+        width: 13vh;
+        height: 3.5vh;
+    }
+}
+
+.calorieshown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    margin-top: 30px;
+
+    h2 {
+        color: greenyellow;
+        margin-top: 30px;
+        border-bottom: greenyellow 1px solid;
+        width: 400px;
+        height: 40px;
+        text-align: center;
+    }
+    h2,p {
+        margin-bottom: 30px;
+
+       
+    }
+}
