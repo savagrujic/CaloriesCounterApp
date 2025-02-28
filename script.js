@@ -9,17 +9,30 @@ let biraj = document.querySelector('select')
 let dugme = document.querySelector('.dodajpodatke')
 let caloriebudget = document.querySelector('.caloriebudget')
 let caloriecounter = 0;
+adding_workout= false
 let fullcalories = document.querySelector('.finalcalories')
+let calorieburned = document.querySelector('.calorieburned')
 cannaddcalories = true
-
+let caloriesbe  = 0
+let b = 0
 function DodajCalorie(div) {
     cannaddcalories = false
- 
+
+
+
     let title = document.createElement('h4')
-    title.textContent = 'Enter name of the food'
+   
     let input1 = document.createElement('input')
     let caloriesdescription = document.createElement('h4')
-    caloriesdescription.textContent = 'Enter Calories:'
+    
+    if (adding_workout) {
+        title.textContent = 'Enter name of the workout:'
+        caloriesdescription.textContent = 'Enter Calories you burned:'
+    
+     } else {
+         title.textContent = 'Enter name of the food'
+         caloriesdescription.textContent = 'Enter Calories:'
+     }
     let input2 = document.createElement('input')
     let button = document.createElement('button')
     let cancle = document.createElement('button')
@@ -35,6 +48,7 @@ function DodajCalorie(div) {
     div.appendChild(tempdiv)
 
     cancle.addEventListener('click', function (){
+        adding_workout = false
         div.removeChild(tempdiv)
         cannaddcalories = true
         dugme.disabled = false
@@ -46,18 +60,24 @@ function DodajCalorie(div) {
 
 
     button.addEventListener('click', function() {
-
-
+        let burnedcalories = 0
+        
 
         let curretbudget = Math.floor(caloriebudget.value)
         caloriecounter+= Math.floor(input2.value)
-        if (curretbudget > caloriecounter) { 
-            fullcalories.textContent = curretbudget - caloriecounter + ' Left'  
+        if ((curretbudget > caloriecounter) ||  (curretbudget=== caloriecounter) ){ 
+            caloriesbe = curretbudget - caloriecounter  
+            fullcalories.textContent = caloriesbe + ' Left'
             fullcalories.style.color = 'green'
+            console.log(caloriesbe)
+            console.log(caloriecounter)
            }
         if (curretbudget < caloriecounter) {
-             fullcalories.textContent = caloriecounter  - curretbudget + ' Surplus' 
+            caloriesbe= caloriecounter  - curretbudget 
+            fullcalories.textContent = caloriesbe + ' Surplus'
              fullcalories.style.color = 'red'     }
+        
+        
         
         
         if(input1.value != '' && input2.value != '' && !isNaN(input2.value) && isNaN(input1.value)) {
@@ -108,9 +128,6 @@ else if(biraj.options.selectedIndex === 2 ) {
 }
 else if(biraj.options.selectedIndex === 3 ) {
     DodajCalorie(snackdiv)
-}
-else if(biraj.options.selectedIndex === 4 ) {
-   // DodajCalorie(workoutdiv)
 }
 }
 
