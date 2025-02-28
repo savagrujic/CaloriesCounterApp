@@ -12,7 +12,7 @@
         <div class="container">
         <p>Budget</p>
    
-        <input type="text">
+        <input type="text" class="caloriebudget">
     </div>
   
         <div class="breakfest">
@@ -58,24 +58,25 @@
           
       
             <select name="" id="select">
-                <option value="">Breakfest</option>
-                <option value="">Lunch</option>
-                <option value="">Dinner</option>
-                <option value="">Snacks</option>
-                <option value="">Workout</option>
+                <option value="0">Breakfest</option>
+                <option value="1">Lunch</option>
+                <option value="2">Dinner</option>
+                <option value="3">Snacks</option>
+                <option value="4">Workout</option>
             </select>
-            <button>Add Entry</button>
+            <button class="dodajpodatke">Add Entry</button>
         </div>
         <div class="calccalories">
             <button>Calculate Calories</button>
             <button>Clear</button>
         </div>
         <div class="calorieshown">  
-            <h2>Calories1</h2>
+            <h2 class="finalcalories">No Calories entered</h2>
             <p>Calories Burned</p>
             <p>Calories Burned</p>
             <p>Calories Burned</p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
